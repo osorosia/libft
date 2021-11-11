@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2021/11/03 17:14:21 by rnishimo         ###   ########.fr        #
+#    Updated: 2021/11/11 13:45:02 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,8 +64,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	gcc -I . -L . main.c
-	./a.out
 
 .c.o: $(SRCS)
 	gcc -Wall -Wextra -Werror -c -o $@ $<
