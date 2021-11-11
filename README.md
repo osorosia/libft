@@ -22,6 +22,8 @@ https://github.com/tsumita2929/libft-unit-test
 # command
 $ git clone https://github.com/tsumita2929/libft-unit-test.git
 $ cd libft-unit-test
+$ make
+$./run_test
 ```
 
 ### Libftest
