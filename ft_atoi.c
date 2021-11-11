@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:00:02 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/11 14:03:22 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:04:50 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static bool	_is_overflow(const char *s, long long num, long long sign)
 	return (num > div || (num == div && *s - '0' > mod));
 }
 
-static long	long _atoll(const char *s, long long num, long long sign)
+static long	long	_atoll(const char *s, long long num, long long sign)
 {
 	while ('0' <= *s && *s <= '9')
 	{
