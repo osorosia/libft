@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 07:39:39 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/10/31 02:03:54 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:44:43 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	while (src[i] != '\0' && i < dstsize - dst_len - 1)
 	{
-		dst[i + dst_len] = src[i];
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dst[i + dst_len] = '\0';
+	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
