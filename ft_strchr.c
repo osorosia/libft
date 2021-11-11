@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 18:43:54 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/05 16:57:28 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:53:21 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	ch;
+	char	chr;
 
-	ch = (char)c;
-	while (*s != ch && *s != '\0')
+	chr = (char)c;
+	while (*s != chr && *s != '\0')
 		s++;
-	if (*s == ch)
+	if (*s == chr)
 		return ((char *)s);
 	return (NULL);
 }
