@@ -6,13 +6,13 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:00:02 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/03 07:10:25 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/11 14:03:22 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int c)
+static bool	_isspace(int c)
 {
 	return (c == '\t'
 		|| c == '\n'
@@ -22,10 +22,10 @@ static int	ft_isspace(int c)
 		|| c == ' ');
 }
 
-static bool	is_overflow(const char *s, unsigned long num, long sign)
+static bool	_is_overflow(const char *s, long long num, long long sign)
 {
-	unsigned long	div;
-	int				mod;
+	long long	div;
+	long long	mod;
 
 	div = LONG_MAX / 10;
 	mod = LONG_MAX % 10;
@@ -41,11 +41,11 @@ static bool	is_overflow(const char *s, unsigned long num, long sign)
 	return (num > div || (num == div && *s - '0' > mod));
 }
 
-static long	ft_atoi_num(const char *s, unsigned long num, long sign)
+static long	long _atoll(const char *s, long long num, long long sign)
 {
 	while ('0' <= *s && *s <= '9')
 	{
-		if (is_overflow(s, num, sign))
+		if (_is_overflow(s, num, sign))
 		{
 			if (sign == -1)
 				return (LONG_MIN);
@@ -61,12 +61,12 @@ static long	ft_atoi_num(const char *s, unsigned long num, long sign)
 
 int	ft_atoi(const char *s)
 {
-	unsigned long	num;
-	long			sign;
+	long long	num;
+	long long	sign;
 
 	num = 0;
 	sign = 1;
-	while (ft_isspace(*s))
+	while (_isspace(*s))
 		s++;
 	if (*s == '+' || *s == '-')
 	{
@@ -74,5 +74,5 @@ int	ft_atoi(const char *s)
 			sign *= -1;
 		s++;
 	}
-	return ((int)ft_atoi_num(s, num, sign));
+	return ((int)_atoll(s, num, sign));
 }
