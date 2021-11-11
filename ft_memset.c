@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:53:04 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/01 06:10:19 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:07:29 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
+	size_t			i;
 
 	ptr = (unsigned char *)s;
-	while (n--)
+	i = 0;
+	while (i < n)
 	{
 		*ptr = (unsigned char)c;
 		ptr++;
+		i++;
 	}
 	return (s);
 }
