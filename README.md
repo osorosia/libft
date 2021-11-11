@@ -23,3 +23,16 @@ https://github.com/tsumita2929/libft-unit-test
 $ git clone https://github.com/tsumita2929/libft-unit-test.git
 $ cd libft-unit-test
 ```
+
+### Libftest
+https://github.com/jtoty/Libftest
+```
+$ pwd
+> .../libft
+$ git clone https://github.com/jtoty/Libftest.git
+$ cd Libftest
+$ ./grademe.sh
+$ vi my_config.sh
+    # set PATH_LIBFT value
+$ ./grademe.sh
+```
