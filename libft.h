@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/03 08:17:11 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/11 20:28:22 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 # define LIBFT_H
 
 # include <limits.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stddef.h>
 # include <string.h>
 # include <stdlib.h>
 # include <stdbool.h>
 # include <unistd.h>
+# include <sys/errno.h>
 
 typedef struct s_list
 {
