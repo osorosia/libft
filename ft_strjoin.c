@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:25:58 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/01 18:46:35 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/13 00:32:52 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = 0;
 	while (*s1 != '\0')
-		str[i++] = *s1++;
+		str[i++] = *(s1++);
 	while (*s2 != '\0')
-		str[i++] = *s2++;
+		str[i++] = *(s2++);
 	str[i] = '\0';
 	return (str);
 }
