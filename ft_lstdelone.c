@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 20:15:24 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/01 21:23:36 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/13 06:29:18 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (lst == NULL || del == NULL)
+	if (lst == NULL)
 		return ;
-	(*del)(lst->content);
+	if (del != NULL)
+		(*del)(lst->content);
 	free(lst);
 }

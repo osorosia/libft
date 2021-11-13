@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 20:21:36 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/01 21:48:24 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/13 06:28:57 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*lst_next;
 
-	if (lst == NULL || del == NULL)
+	if (lst == NULL)
 		return ;
 	while (*lst)
 	{
