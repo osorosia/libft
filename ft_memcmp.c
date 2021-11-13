@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:38:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/12 01:30:28 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/13 07:15:18 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (ptr1[i] != ptr2[i])
-			return ((int)*ptr1 - (int)*ptr2);
+			return ((int)ptr1[i] - (int)ptr2[i]);
 		i++;
 	}
 	return (0);
