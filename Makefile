@@ -6,11 +6,15 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2021/11/11 13:45:02 by rnishimo         ###   ########.fr        #
+#    Updated: 2021/11/12 02:01:05 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+RM = rm -f
+AR = ar rcs
 SRCS = ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -55,7 +59,7 @@ SRCS_BONUS = ft_lstnew.c \
 			ft_lstiter.c \
 			ft_lstmap.c
 ifdef WITH_BONUS
-SRCS += $(SRCS_BONUS)
+	SRCS += $(SRCS_BONUS)
 endif
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
@@ -63,17 +67,17 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 .c.o: $(SRCS)
-	gcc -Wall -Wextra -Werror -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -f $(OBJS)
-	rm -f $(OBJS_BONUS)
+	$(RM) $(OBJS)
+	$(RM) $(OBJS_BONUS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
