@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 20:59:13 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/01 22:09:31 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/13 07:08:16 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	lst_map_back = NULL;
 	while (lst)
 	{
-		lst_map_now = ft_lstnew((*f)(lst->content));
+		if (f)
+			lst_map_now = ft_lstnew((*f)(lst->content));
+		else
+			lst_map_now = ft_lstnew(lst->content);
 		if (lst_map_now == NULL)
 		{
 			ft_lstclear(&lst_map, del);
