@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 12:18:48 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/01 20:20:15 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/13 01:07:44 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,9 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (s == NULL)
 		return ;
-	write(fd, s, ft_strlen(s));
+	while (*s != '\0')
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
