@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 20:53:51 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/01 21:59:53 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/13 07:02:39 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (f == NULL)
+		return ;
 	while (lst)
 	{
 		(*f)(lst->content);
