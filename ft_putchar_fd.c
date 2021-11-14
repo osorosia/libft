@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 11:32:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/10/13 14:20:56 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/14 12:38:48 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd < 0)
+	{
+		errno = EBADF;
+		return ;
+	}
 	write(fd, &c, 1);
 }

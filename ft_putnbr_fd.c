@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 13:03:01 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/13 01:09:18 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/14 12:06:11 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,10 @@ static void	ft_putnbr_fd_recursive(long long n, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+	{
+		errno = EBADF;
+		return ;
+	}
 	ft_putnbr_fd_recursive((long long)n, fd);
 }
