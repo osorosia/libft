@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 12:18:48 by rnishimo          #+#    #+#             */
-/*   Updated: 2021/11/14 12:39:43 by rnishimo         ###   ########.fr       */
+/*   Updated: 2021/11/15 12:51:43 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s == NULL)
+	size_t	s_len;
+	size_t	buffer_size;
+
+	if (s == NULL || fd < 0)
 		return ;
-	if (fd < 0)
+	s_len = ft_strlen(s);
+	buffer_size = INT_MAX / 2;
+	while (s_len > buffer_size)
 	{
-		errno = EBADF;
-		return ;
+		write(fd, s, buffer_size);
+		s += buffer_size;
+		s_len -= buffer_size;
 	}
-	while (*s != '\0')
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
+	write(fd, s, s_len);
 }
