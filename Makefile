@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/01/08 07:51:22 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/01/08 08:05:44 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,9 @@ fclean: clean
 
 re: fclean all
 
+bonus: all
+
 test: all
 	bash test.sh
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus test
