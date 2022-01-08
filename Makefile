@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/01/08 07:16:46 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/01/08 07:51:22 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ SRCS = ft_isalpha.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_isnumber.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -77,5 +78,8 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+test: all
+	bash test.sh
 
 .PHONY: all clean fclean re bonus
