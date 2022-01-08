@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/01/08 08:10:34 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/01/08 08:27:03 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ test: all
 	bash test.sh
 
 tester: all
-	git clone https://github.com/Tripouille/libftTester.git
+	if [ ! -d ./libftTester ]; then git clone -q https://github.com/Tripouille/libftTester.git; fi
 	cd libftTester && make m b
 
 .PHONY: all clean fclean re bonus test tester
