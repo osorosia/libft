@@ -1,12 +1,9 @@
 #include "libft.h"
 #include <stdio.h>
 
-#define CASE(s) \
-    printf("\n%s:", s)
-#define OK() \
-    printf("o")
-#define KO() \
-    printf("x")
+#define CASE(s) printf("\n%s:", s)
+#define OK() printf("o")
+#define KO() printf("x")
 
 void assert_bool(bool expected, bool actual) {
     if (actual == expected) OK();
