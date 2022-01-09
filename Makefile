@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/01/08 08:42:20 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/01/09 23:30:21 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,7 @@ re: fclean all
 bonus: all
 
 test: all
-	bash test.sh
+	cd ./.test && bash ./test.sh
 
 tester: all
 	if [ ! -d ./libftTester ]; then git clone -q https://github.com/Tripouille/libftTester.git; fi
