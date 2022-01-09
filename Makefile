@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/01/08 08:27:03 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/01/08 08:42:20 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,12 +59,13 @@ SRCS = ft_isalpha.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_isnumber.c \
+		get_next_line.c \
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) libft.h
 	$(AR) $(NAME) $(OBJS)
 
 .c.o: $(SRCS)

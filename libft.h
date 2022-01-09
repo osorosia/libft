@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/01/08 07:53:27 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/01/09 22:41:47 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include <sys/errno.h>
+
+# define FD_MAX 256
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 32
+# endif
 
 typedef struct s_list
 {
@@ -71,7 +76,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-// original
+// additional
 bool	ft_isnumber(char *str);
+char	*ft_strdup_to_c(const char *s1, char c);
+char	*ft_strndup(const char *s1, size_t n);
+size_t	ft_strlen_to_c(const char *str, const char c);
+char	*get_next_line(int fd);
 
 #endif
