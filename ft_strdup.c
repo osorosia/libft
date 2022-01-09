@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 20:47:27 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/01/09 23:04:05 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/01/09 23:24:13 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strdup(const char *s1)
 	return (str);
 }
 
-char *ft_strndup(const char *s1, size_t n)
+char	*ft_strndup(const char *s1, size_t n)
 {
 	char	*str;
 	size_t	i;
