@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 13:35:01 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/01/09 22:34:31 by rnishimo         ###   ########.fr       */
+/*   Created: 2021/12/10 18:23:51 by rnishimo          #+#    #+#             */
+/*   Updated: 2022/01/29 16:35:47 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_abs(int num)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if (num < 0)
+		return (num * -1);
+	return (num);
 }
