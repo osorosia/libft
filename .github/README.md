@@ -4,7 +4,7 @@
 https://github.com/Tripouille/libftTester
 ```sh
 $ pwd
-> <repository name>/gcc/libft
+<repository name>/gcc/libft
 
 $ git clone https://github.com/Tripouille/libftTester.git
 $ cd libftTester
