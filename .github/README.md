@@ -2,7 +2,7 @@
 ## Tester
 ### libftTester
 https://github.com/Tripouille/libftTester
-```
+```sh
 $ pwd
 > <repository name>/gcc/libft
 
@@ -13,7 +13,7 @@ $ make m b
 
 ### libft-unit-test
 https://github.com/tsumita2929/libft-unit-test
-```
+```sh
 # file structure
 .
 |- libft/
@@ -28,7 +28,7 @@ $./run_test
 
 ### Libftest
 https://github.com/jtoty/Libftest
-```
+```sh
 $ pwd
 > .../libft
 $ git clone https://github.com/jtoty/Libftest.git
