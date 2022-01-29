@@ -6,3 +6,5 @@
 **/*.gch
 **/main.c
 **/a.out
+**/tmp*
+**/temp*
