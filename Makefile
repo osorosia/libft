@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/01/29 18:02:01 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/05/22 04:44:38 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,7 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 AR = ar rcs
 
-SRCS = ft_abs.c \
-ft_abs_l.c \
-ft_abs_ll.c \
+SRCS = \
 ft_atoi.c \
 ft_bzero.c \
 ft_calloc.c \
@@ -29,24 +27,11 @@ ft_isdigit.c \
 ft_isnumber.c \
 ft_isprint.c \
 ft_itoa.c \
-ft_lstadd_back.c \
-ft_lstadd_front.c \
-ft_lstclear.c \
-ft_lstdelone.c \
-ft_lstiter.c \
-ft_lstlast.c \
-ft_lstmap.c \
-ft_lstnew.c \
-ft_lstsize.c \
 ft_memchr.c \
 ft_memcmp.c \
 ft_memcpy.c \
 ft_memmove.c \
 ft_memset.c \
-ft_numlen.c \
-ft_numlen_base.c \
-ft_numlen_u.c \
-ft_numlen_u_base.c \
 ft_putchar_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c \
