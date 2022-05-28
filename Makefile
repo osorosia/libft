@@ -21,6 +21,7 @@ SRCS += $(addprefix ft_is/, \
 	ft_isnumber.c \
 	ft_isprint.c \
 	)
+OBJ_DIR += ft_is/
 
 SRCS += $(addprefix ft_mem/, \
 	ft_bzero.c \
@@ -31,6 +32,7 @@ SRCS += $(addprefix ft_mem/, \
 	ft_memmove.c \
 	ft_memset.c \
 	)
+OBJ_DIR += ft_mem/
 
 SRCS += $(addprefix ft_put/, \
 	ft_putchar_fd.c \
@@ -39,6 +41,7 @@ SRCS += $(addprefix ft_put/, \
 	ft_putnstr_fd.c \
 	ft_putstr_fd.c \
 	)
+OBJ_DIR += ft_put/
 
 SRCS += $(addprefix ft_str/, \
 	ft_atoi.c \
@@ -63,23 +66,30 @@ SRCS += $(addprefix ft_str/, \
 	ft_tolower.c \
 	ft_toupper.c \
 	)
+OBJ_DIR += ft_str/
 
 SRCS += $(addprefix get_next_line/, \
 	get_next_line.c \
 	)
+OBJ_DIR += get_next_line/
 
-OBJS = $(SRCS:%.c=%.o)
+OBJS = $(SRCS:%.c=obj/%.o)
+OBJ_DIR := $(addprefix obj/, $(OBJ_DIR))
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-%.o: %.c libft.h
+obj/%.o: %.c libft.h $(OBJ_DIR)
 	gcc $(CFLAGS) -I. -c -o $@ $<
+
+$(OBJ_DIR):
+	mkdir -p $@
 
 all: $(NAME)
 
 clean:
 	rm -f $(OBJS)
+	rm -rf obj
 
 fclean: clean
 	rm -f $(NAME)
