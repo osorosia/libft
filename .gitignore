@@ -2,6 +2,7 @@
 *.a
 *.o
 *.gch
+*.txt
 main.c
 a.out
 tmp*
