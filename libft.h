@@ -23,7 +23,7 @@
 
 # define FD_MAX 256
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 32
+#  define BUFFER_SIZE 1
 # endif
 
 typedef struct s_list
