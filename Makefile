@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/05/28 19:00:31 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/05/28 19:11:05 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,11 +57,11 @@ OBJ_DIR += ft_put/
 SRCS += $(addprefix ft_put/, \
 	ft_putchar_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_base.c \
+	ft_putnbr_base_fd.c \
 	ft_putnbr_fd.c \
 	ft_putnstr_fd.c \
 	ft_putstr_fd.c \
-	ft_putunbr_base.c \
+	ft_putunbr_base_fd.c \
 	)
 
 OBJ_DIR += ft_str/

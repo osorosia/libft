@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	_vprintf(const char *format, va_list ap)
+int	_vdprintf(int fd, const char *format, va_list ap)
 {
 	long	print_size;
 	long	i;
@@ -10,10 +10,10 @@ int	_vprintf(const char *format, va_list ap)
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
-			print_size += print_spec(format[++i], ap);
+			print_size += print_spec(format[++i], ap, fd);
 		else
 		{
-			ft_putchar_fd(format[i], 1);
+			ft_putchar_fd(format[i], fd);
 			print_size++;
 		}
 		i++;
@@ -29,7 +29,20 @@ int	ft_printf(const char *format, ...)
 	if (format == NULL)
 		return (0);
 	va_start(ap, format);
-	print_size = _vprintf(format, ap);
+	print_size = _vdprintf(1, format, ap);
+	va_end(ap);
+	return (print_size);
+}
+
+int	ft_dprintf(int fd, const char *format, ...)
+{
+	va_list	ap;
+	int	print_size;
+
+	if (format == NULL)
+		return (0);
+	va_start(ap, format);
+	print_size = _vdprintf(fd, format, ap);
 	va_end(ap);
 	return (print_size);
 }

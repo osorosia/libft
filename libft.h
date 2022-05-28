@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/28 19:04:16 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/28 19:17:42 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,24 +51,25 @@ long		ft_unumlen(size_t num, long base);
 
 // ft_printf
 int			ft_printf(const char *format, ...);
+int			ft_dprintf(int fd, const char *format, ...);
 // (private)
-long		spec_c(va_list ap);
-long		spec_d(va_list ap);
-long		spec_p(va_list ap);
-long		spec_s(va_list ap);
-long		spec_u(va_list ap);
-long		spec_x(va_list ap);
-long		spec_X(va_list ap);
-long		print_spec(char c, va_list ap);
+long		spec_c(va_list ap, int fd);
+long		spec_d(va_list ap, int fd);
+long		spec_p(va_list ap, int fd);
+long		spec_s(va_list ap, int fd);
+long		spec_u(va_list ap, int fd);
+long		spec_x(va_list ap, int fd);
+long		spec_X(va_list ap, int fd);
+long		print_spec(char c, va_list ap, int fd);
 
 // ft_put
 void		ft_putchar_fd(char c, int fd);
 void		ft_putendl_fd(char *s, int fd);
-void		ft_putnbr_base(long num, char *base);
+void		ft_putnbr_base_fd(long num, char *base, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putnstr_fd(char *s, size_t n, int fd);
 void		ft_putstr_fd(char *s, int fd);
-void		ft_putunbr_base(size_t num, char *base);
+void		ft_putunbr_base_fd(size_t num, char *base, int fd);
 
 // ft_str
 int			ft_atoi(const char *str);

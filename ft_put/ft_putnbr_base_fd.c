@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void    ft_putnbr_base(long num, char *base) {
+void    ft_putnbr_base_fd(long num, char *base, int fd) {
     const long    base_len = ft_strlen(base);
     
     if (num < 0)
@@ -9,6 +9,6 @@ void    ft_putnbr_base(long num, char *base) {
         num *= -1;
     }
     if (num / base_len != 0)
-        ft_putnbr_base(num / base_len, base);
+        ft_putnbr_base_fd(num / base_len, base, fd);
     ft_putchar_fd(base[num % base_len], 1);
 }
