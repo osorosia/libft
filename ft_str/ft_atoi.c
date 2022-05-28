@@ -32,11 +32,9 @@ int	ft_atoi(const char *s)
 	sign = 1;
 	while (ft_isspace(*s))
 		s++;
+	if (*s == '-')
+		sign *= -1;
 	if (*s == '+' || *s == '-')
-	{
-		if (*s == '-')
-			sign *= -1;
 		s++;
-	}
 	return ((int)_atoll(s, num, sign));
 }
