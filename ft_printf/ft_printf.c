@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/28 19:25:08 by rnishimo          #+#    #+#             */
+/*   Updated: 2022/05/28 19:25:41 by rnishimo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	_vdprintf(int fd, const char *format, va_list ap)
@@ -24,7 +36,7 @@ int	_vdprintf(int fd, const char *format, va_list ap)
 int	ft_printf(const char *format, ...)
 {
 	va_list	ap;
-	int	print_size;
+	int		print_size;
 
 	if (format == NULL)
 		return (0);
@@ -37,7 +49,7 @@ int	ft_printf(const char *format, ...)
 int	ft_dprintf(int fd, const char *format, ...)
 {
 	va_list	ap;
-	int	print_size;
+	int		print_size;
 
 	if (format == NULL)
 		return (0);
