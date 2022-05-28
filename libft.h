@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/28 18:47:59 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/28 19:04:16 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ long		ft_unumlen(size_t num, long base);
 
 // ft_printf
 int			ft_printf(const char *format, ...);
+// (private)
 long		spec_c(va_list ap);
 long		spec_d(va_list ap);
 long		spec_p(va_list ap);
