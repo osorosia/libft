@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/05/22 05:13:51 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/05/28 19:00:31 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,13 +35,33 @@ SRCS += $(addprefix ft_mem/, \
 	ft_memset.c \
 	)
 
+OBJ_DIR += ft_num/
+SRCS += $(addprefix ft_num/, \
+	ft_numlen.c \
+	ft_unumlen.c \
+	)
+
+OBJ_DIR += ft_printf/
+SRCS += $(addprefix ft_printf/, \
+	ft_printf.c \
+	spec_c.c \
+	spec_d.c \
+	spec_p.c \
+	spec_s.c \
+	spec_u.c \
+	spec_xX.c \
+	spec.c \
+	)
+
 OBJ_DIR += ft_put/
 SRCS += $(addprefix ft_put/, \
 	ft_putchar_fd.c \
 	ft_putendl_fd.c \
+	ft_putnbr_base.c \
 	ft_putnbr_fd.c \
 	ft_putnstr_fd.c \
 	ft_putstr_fd.c \
+	ft_putunbr_base.c \
 	)
 
 OBJ_DIR += ft_str/
@@ -76,6 +96,7 @@ SRCS += $(addprefix get_next_line/, \
 
 OBJS = $(SRCS:%.c=obj/%.o)
 OBJ_DIR := $(addprefix obj/, $(OBJ_DIR))
+OBJ_DIR := $(addsuffix .keep, $(OBJ_DIR))
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
@@ -84,13 +105,13 @@ obj/%.o: %.c libft.h $(OBJ_DIR)
 	gcc $(CFLAGS) -I. -c -o $@ $<
 
 $(OBJ_DIR):
-	mkdir -p $@
+	mkdir -p $(@D)
+	touch $@
 
 all: $(NAME)
 
 clean:
 	rm -f $(OBJS)
-	rm -rf obj
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/01/29 18:01:53 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/28 18:47:59 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <limits.h>
+# include <stdarg.h>
 # include <stdint.h>
 # include <stddef.h>
 # include <stdlib.h>
@@ -25,12 +26,6 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 // ft_is
 int			ft_isalnum(int c);
@@ -50,12 +45,29 @@ void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
 void		*ft_memset(void *buf, int ch, size_t n);
 
+// ft_num
+long		ft_numlen(long num, long base);
+long		ft_unumlen(size_t num, long base);
+
+// ft_printf
+int			ft_printf(const char *format, ...);
+long		spec_c(va_list ap);
+long		spec_d(va_list ap);
+long		spec_p(va_list ap);
+long		spec_s(va_list ap);
+long		spec_u(va_list ap);
+long		spec_x(va_list ap);
+long		spec_X(va_list ap);
+long		print_spec(char c, va_list ap);
+
 // ft_put
 void		ft_putchar_fd(char c, int fd);
 void		ft_putendl_fd(char *s, int fd);
+void		ft_putnbr_base(long num, char *base);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putnstr_fd(char *s, size_t n, int fd);
 void		ft_putstr_fd(char *s, int fd);
+void		ft_putunbr_base(size_t num, char *base);
 
 // ft_str
 int			ft_atoi(const char *str);
