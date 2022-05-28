@@ -13,6 +13,7 @@
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 
+OBJ_DIR += ft_is/
 SRCS += $(addprefix ft_is/, \
 	ft_isalnum.c \
 	ft_isalpha.c \
@@ -22,8 +23,8 @@ SRCS += $(addprefix ft_is/, \
 	ft_isprint.c \
 	ft_isspace.c \
 	)
-OBJ_DIR += ft_is/
 
+OBJ_DIR += ft_mem/
 SRCS += $(addprefix ft_mem/, \
 	ft_bzero.c \
 	ft_calloc.c \
@@ -33,8 +34,8 @@ SRCS += $(addprefix ft_mem/, \
 	ft_memmove.c \
 	ft_memset.c \
 	)
-OBJ_DIR += ft_mem/
 
+OBJ_DIR += ft_put/
 SRCS += $(addprefix ft_put/, \
 	ft_putchar_fd.c \
 	ft_putendl_fd.c \
@@ -42,8 +43,8 @@ SRCS += $(addprefix ft_put/, \
 	ft_putnstr_fd.c \
 	ft_putstr_fd.c \
 	)
-OBJ_DIR += ft_put/
 
+OBJ_DIR += ft_str/
 SRCS += $(addprefix ft_str/, \
 	ft_atoi.c \
 	ft_itoa.c \
@@ -67,12 +68,11 @@ SRCS += $(addprefix ft_str/, \
 	ft_tolower.c \
 	ft_toupper.c \
 	)
-OBJ_DIR += ft_str/
 
+OBJ_DIR += get_next_line/
 SRCS += $(addprefix get_next_line/, \
 	get_next_line.c \
 	)
-OBJ_DIR += get_next_line/
 
 OBJS = $(SRCS:%.c=obj/%.o)
 OBJ_DIR := $(addprefix obj/, $(OBJ_DIR))
