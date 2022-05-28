@@ -20,6 +20,7 @@ SRCS += $(addprefix ft_is/, \
 	ft_isdigit.c \
 	ft_isnumber.c \
 	ft_isprint.c \
+	ft_isspace.c \
 	)
 OBJ_DIR += ft_is/
 
