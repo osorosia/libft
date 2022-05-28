@@ -39,6 +39,7 @@ int			ft_isascii(int c);
 int			ft_isdigit(int c);
 bool		ft_isnumber(char *str);
 int			ft_isprint(int c);
+bool		ft_isspace(int c);
 
 // ft_mem
 void		ft_bzero(void *s, size_t n);
