@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/05/29 18:03:15 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/05/29 18:05:14 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,6 +87,14 @@ SRCS += $(addprefix ft_str/, \
 	ft_substr.c \
 	ft_tolower.c \
 	ft_toupper.c \
+	)
+
+OBJ_DIR += ft_x/
+SRCS += $(addprefix ft_x/, \
+	ft_xcalloc.c \
+	ft_xsplit.c \
+	ft_xstrdup.c \
+	ft_xstrndup.c \
 	)
 
 OBJ_DIR += get_next_line/

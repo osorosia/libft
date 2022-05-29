@@ -6,13 +6,14 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/28 19:17:42 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/29 18:02:15 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <limits.h>
 # include <stdarg.h>
 # include <stdint.h>
@@ -93,6 +94,12 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
+
+// ft_x
+void		*ft_xcalloc(size_t count, size_t size);
+char		**ft_xsplit(char const *s, char c);
+char		*ft_xstrdup(const char *s1);
+char		*ft_strndup(const char *s1, size_t n);
 
 // get_next_line
 char		*get_next_line(int fd);
