@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/05/28 19:11:05 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/05/29 18:03:15 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,6 +119,6 @@ fclean: clean
 re: fclean all
 
 norm:
-	norminette | grep Error
+	norminette | grep -v 'OK!' || echo norm: OK
 
 .PHONY: all clean fclean re norm
