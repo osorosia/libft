@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/30 00:55:12 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/30 02:04:10 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 # define LIBFT_H
 
 # include <stdio.h>
+# include <fcntl.h>
 # include <limits.h>
 # include <stdarg.h>
 # include <stdint.h>
 # include <stddef.h>
 # include <stdlib.h>
-# include <stdbool.h>
 # include <unistd.h>
+# include <stdbool.h>
+# include <sys/stat.h>
 # include <sys/errno.h>
+# include <sys/types.h>
 
 # define FD_MAX 256
 # ifndef BUFFER_SIZE
@@ -102,6 +105,10 @@ char		*ft_xstrdup(const char *s1);
 char		*ft_xstrjoin_with_free(char *s1, bool b1, char *s2, bool b2);
 char		*ft_xstrjoin(char const *s1, char const *s2);
 char		*ft_strndup(const char *s1, size_t n);
+
+// ft_xstd
+int			ft_xopen(const char *path, int oflag);
+ssize_t		ft_xread(int fd, void *buf, size_t n);
 
 // get_next_line
 char		*get_next_line(int fd);
