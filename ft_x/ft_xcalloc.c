@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 18:02:36 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/29 18:02:37 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/30 16:49:20 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,7 @@ void	*ft_xcalloc(size_t count, size_t size)
 		errno = ENOMEM;
 		return (NULL);
 	}
-	ptr = (void *)malloc(count * size);
-	if (ptr == NULL)
-	{
-		perror("malloc");
-		exit(1);
-	}
+	ptr = (void *)ft_xmalloc(count * size);
 	ft_memset(ptr, 0, count * size);
 	return (ptr);
 }
