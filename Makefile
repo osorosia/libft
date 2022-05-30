@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/05/30 02:01:16 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/05/30 16:48:39 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -101,6 +101,7 @@ SRCS += $(addprefix ft_x/, \
 
 OBJ_DIR += ft_xstd/
 SRCS += $(addprefix ft_xstd/, \
+	ft_xmalloc.c \
 	ft_xopen.c \
 	ft_xread.c \
 	)

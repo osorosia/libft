@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/30 02:04:10 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/30 16:48:50 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ char		*ft_xstrjoin(char const *s1, char const *s2);
 char		*ft_strndup(const char *s1, size_t n);
 
 // ft_xstd
+void	    *ft_xmalloc(size_t size);
 int			ft_xopen(const char *path, int oflag);
 ssize_t		ft_xread(int fd, void *buf, size_t n);
 
