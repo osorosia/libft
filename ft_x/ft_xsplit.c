@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 23:46:44 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/29 18:02:35 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/30 16:53:18 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,7 @@ char	**ft_xsplit(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	strs_len = _get_strs_len(s, c);
-	strs = (char **)malloc(sizeof(char *) * (strs_len + 1));
-	if (strs == NULL)
-	{
-		perror("malloc");
-		exit(1);
-	}
+	strs = ft_xcalloc(strs_len + 1, sizeof(char *));
 	if (!_get_strs_recursive(strs, s, c))
 	{
 		free(strs);
