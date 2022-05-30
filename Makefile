@@ -6,7 +6,7 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/05/30 16:48:39 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/05/30 16:58:17 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,8 +94,9 @@ SRCS += $(addprefix ft_x/, \
 	ft_xcalloc.c \
 	ft_xsplit.c \
 	ft_xstrdup.c \
-	ft_xstrjoin_with_free.c \
+	ft_xstrdup_to_c.c \
 	ft_xstrjoin.c \
+	ft_xstrjoin_with_free.c \
 	ft_xstrndup.c \
 	)
 
@@ -109,6 +110,7 @@ SRCS += $(addprefix ft_xstd/, \
 OBJ_DIR += get_next_line/
 SRCS += $(addprefix get_next_line/, \
 	get_next_line.c \
+	xget_next_line.c \
 	)
 
 OBJS = $(SRCS:%.c=obj/%.o)
