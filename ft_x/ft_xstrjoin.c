@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:53:36 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/30 00:53:53 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/05/30 16:50:20 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,11 @@ char	*ft_xstrjoin(char const *s1, char const *s2)
 		return (ft_xstrdup(s2));
 	if (s2 == NULL)
 		return (ft_xstrdup(s1));
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (str == NULL)
-	{
-		perror("malloc");
-		exit(1);
-	}
+	str = ft_xcalloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	i = 0;
 	while (*s1 != '\0')
 		str[i++] = *(s1++);
 	while (*s2 != '\0')
 		str[i++] = *(s2++);
-	str[i] = '\0';
 	return (str);
 }
