@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:47:03 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/05/30 16:57:06 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/06/01 21:21:25 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 # include <sys/stat.h>
 # include <sys/errno.h>
 # include <sys/types.h>
+
+# include "./ft_printf/ft_printf.h"
 
 # define FD_MAX 256
 # ifndef BUFFER_SIZE
@@ -56,15 +58,6 @@ long		ft_unumlen(size_t num, long base);
 // ft_printf
 int			ft_printf(const char *format, ...);
 int			ft_dprintf(int fd, const char *format, ...);
-// (private)
-long		spec_c(va_list ap, int fd);
-long		spec_d(va_list ap, int fd);
-long		spec_p(va_list ap, int fd);
-long		spec_s(va_list ap, int fd);
-long		spec_u(va_list ap, int fd);
-long		spec_x(va_list ap, int fd);
-long		spec_X(va_list ap, int fd);
-long		print_spec(char c, va_list ap, int fd);
 
 // ft_put
 void		ft_putchar_fd(char c, int fd);
