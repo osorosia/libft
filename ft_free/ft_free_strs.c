@@ -6,7 +6,7 @@
 /*   By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 21:53:43 by rnishimo          #+#    #+#             */
-/*   Updated: 2022/06/01 21:53:59 by rnishimo         ###   ########.fr       */
+/*   Updated: 2022/06/01 22:25:26 by rnishimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	ft_free_strs(char **strs)
 
 	i = 0;
 	while (strs[i])
-		free(strs[i]);
+		free(strs[i++]);
 	free(strs);
 }
