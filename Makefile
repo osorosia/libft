@@ -6,12 +6,17 @@
 #    By: rnishimo <rnishimo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:29:20 by rnishimo          #+#    #+#              #
-#    Updated: 2022/05/30 16:58:17 by rnishimo         ###   ########.fr        #
+#    Updated: 2022/06/01 21:56:20 by rnishimo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
+
+OBJ_DIR += ft_free/
+SRCS += $(addprefix ft_free/, \
+	ft_free_strs.c \
+	)
 
 OBJ_DIR += ft_is/
 SRCS += $(addprefix ft_is/, \
